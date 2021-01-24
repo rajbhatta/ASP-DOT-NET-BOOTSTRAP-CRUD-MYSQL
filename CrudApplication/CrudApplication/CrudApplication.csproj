@@ -67,6 +67,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+    <Content Include="Assets\bootstrap-grid.css.map" />
+    <Content Include="Assets\bootstrap-grid.min.css.map" />
+    <Content Include="Assets\bootstrap-reboot.css.map" />
+    <Content Include="Assets\bootstrap-reboot.min.css.map" />
+    <Content Include="Assets\bootstrap.css.map" />
+    <Content Include="Assets\bootstrap.min.css.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -75,10 +86,35 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\bootstrap-grid.css" />
+    <Content Include="Assets\bootstrap-grid.min.css" />
+    <Content Include="Assets\bootstrap-reboot.css" />
+    <Content Include="Assets\bootstrap-reboot.min.css" />
+    <Content Include="Assets\bootstrap.css" />
+    <Content Include="Assets\bootstrap.min.css" />
+    <Content Include="View\Default.aspx" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="View\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Modals\" />
+    <Folder Include="Services\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
