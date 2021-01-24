@@ -91,6 +91,7 @@
     <Compile Include="Crud.Master.designer.cs">
       <DependentUpon>Crud.Master</DependentUpon>
     </Compile>
+    <Compile Include="Modals\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="AddUser.aspx.cs">
       <DependentUpon>AddUser.aspx</DependentUpon>
@@ -128,6 +129,7 @@
   <ItemGroup>
     <Folder Include="Modals\" />
     <Folder Include="Services\" />
+    <Folder Include="Services\DataTransfer" />
     <Folder Include="Views\" />
   </ItemGroup>
   <PropertyGroup>

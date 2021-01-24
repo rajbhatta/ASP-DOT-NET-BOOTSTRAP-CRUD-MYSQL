@@ -4,83 +4,82 @@
 
 <html lang="en">
 <head runat="server">
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Welcome to ASP.NET WEB from CRUD application</title>
 
     <!-- Bootstrap, jQueryData table and fontawesome CSS setup -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.23/datatables.min.css"/>
-   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-    <link  rel="stylesheet" href="Assets/css/custom.css" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="Assets/css/custom.css"/>
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <form id="form1" runat="server">
-      <nav class="navbar navbar-expand-lg navbar-light bg-success">
-  <a class="navbar-brand" href="#">R.B </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+<form id="form1" runat="server">
+    <nav class="navbar navbar-expand-lg navbar-light bg-success">
+        <a class="navbar-brand" href="#">R.B </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a runat="server" class="nav-link" href="~/">Home <span class="sr-only">(current)</span></a>
-      </li>
-     
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Users management
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a runat="server" class="dropdown-item" href="~/AddUser.aspx">Add User</a>
-          <a runat="server" class="dropdown-item" href="~/ManageUser.aspx">Manage User</a>
-        </div>
-      </li>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a runat="server" class="nav-link" href="~/">Home <span class="sr-only">(current)</span></a>
+                </li>
 
-        <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Users management with stored procedure
-        </a>
-       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-           <a runat="server" class="dropdown-item" href="~/AddAccount.aspx">Add Account</a>
-           <a runat="server" class="dropdown-item" href="~/ManageAccount.aspx">Manage Account</a>
-        </div>
-      </li>
-
-    </ul>
-  </div>
-</nav> 
-       
-        <!--Start of Master page contentpalaceholder-->
-        <div class="container">
-            <asp:ContentPlaceHolder ID="bodyContentPlaceHolder" runat="server"></asp:ContentPlaceHolder>
-        </div>   
-        <!--End of Master page contentpalaceholder-->
-       
-
-     
-        <!--Start of footer-->
-        <footer>
-            <div id="webFooter" class="container-fluid">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                         © 2021 Developed By: <a class="text-dark" href="https://www.linkedin.com/in/raj-bhatta/">Raj Bhatta</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Users management
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a runat="server" class="dropdown-item" href="~/AddUser.aspx">Add User</a>
+                        <a runat="server" class="dropdown-item" href="~/ManageUser.aspx">Manage User</a>
                     </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Users management with stored procedure
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a runat="server" class="dropdown-item" href="~/AddAccount.aspx">Add Account</a>
+                        <a runat="server" class="dropdown-item" href="~/ManageAccount.aspx">Manage Account</a>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <!--Start of Master page contentpalaceholder-->
+    <div class="container">
+        <asp:ContentPlaceHolder ID="bodyContentPlaceHolder" runat="server"></asp:ContentPlaceHolder>
+    </div>
+    <!--End of Master page contentpalaceholder-->
+
+
+    <!--Start of footer-->
+    <footer>
+        <div id="webFooter" class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                    © 2021 Developed By: <a class="text-dark" href="https://www.linkedin.com/in/raj-bhatta/">Raj Bhatta</a>
                 </div>
             </div>
-        </footer>
-      <!--- End of footer-->
+        </div>
+    </footer>
+    <!--- End of footer-->
 
-    </form>
+</form>
 
-    <!-- JQuery, bootstrap and fontawesome js setup -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<!-- JQuery, bootstrap and fontawesome js setup -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script> 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.23/datatables.min.js"></script>
 </body>
 </html>
