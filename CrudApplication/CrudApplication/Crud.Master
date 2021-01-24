@@ -28,7 +28,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="~/">Home <span class="sr-only">(current)</span></a>
       </li>
      
       <li class="nav-item dropdown">
@@ -36,8 +36,8 @@
           Users management
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Add User</a>
-          <a class="dropdown-item" href="#">Manage User</a>
+          <a runat="server" class="dropdown-item" href="~/AddUser.aspx">Add User</a>
+          <a runat="server" class="dropdown-item" href="~/ManageUser.aspx">Manage User</a>
         </div>
       </li>
 
@@ -46,8 +46,8 @@
           Users management with stored procedure
         </a>
        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Add Account</a>
-          <a class="dropdown-item" href="#">Manage Account</a>
+          <a class="dropdown-item" href="~/AddAccount.aspx">Add Account</a>
+          <a class="dropdown-item" href="~/ManageAccount.aspx">Manage Account</a>
         </div>
       </li>
 
