@@ -66,29 +66,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\Bootstrap\css\bootstrap-grid.css" />
-    <Content Include="Assets\Bootstrap\css\bootstrap-grid.min.css" />
-    <Content Include="Assets\Bootstrap\css\bootstrap-reboot.css" />
-    <Content Include="Assets\Bootstrap\css\bootstrap-reboot.min.css" />
-    <Content Include="Assets\Bootstrap\css\bootstrap.css" />
-    <Content Include="Assets\Bootstrap\js\bootstrap.bundle.js" />
-    <Content Include="Assets\Bootstrap\js\bootstrap.bundle.min.js" />
-    <Content Include="Assets\Bootstrap\js\bootstrap.js" />
-    <Content Include="Assets\Bootstrap\js\bootstrap.min.js" />
-    <Content Include="Assets\Bootstrap\js\jquery-3.5.1.min.js" />
-    <Content Include="Assets\Fontawesome\css\all.min.css" />
+    <Content Include="Assets\css\custom.css" />
     <Content Include="packages.config" />
-    <Content Include="Assets\Bootstrap\js\bootstrap.bundle.js.map" />
-    <Content Include="Assets\Bootstrap\js\bootstrap.bundle.min.js.map" />
-    <Content Include="Assets\Bootstrap\js\bootstrap.js.map" />
-    <Content Include="Assets\Bootstrap\js\bootstrap.min.js.map" />
-    <Content Include="WebForm1.aspx" />
-    <Content Include="Assets\Bootstrap\css\bootstrap-grid.css.map" />
-    <Content Include="Assets\Bootstrap\css\bootstrap-grid.min.css.map" />
-    <Content Include="Assets\Bootstrap\css\bootstrap-reboot.css.map" />
-    <Content Include="Assets\Bootstrap\css\bootstrap-reboot.min.css.map" />
-    <Content Include="Assets\Bootstrap\css\bootstrap.css.map" />
-    <Content Include="Assets\Bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="Home.aspx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -97,20 +77,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\Bootstrap\css\bootstrap.min.css" />
-    <Content Include="Assets\Datatable\css\jquery.dataTables.min.css" />
-    <Content Include="Assets\Datatable\js\dataTables.bootstrap.js" />
-    <Content Include="Assets\Datatable\js\dataTables.bootstrap.min.js" />
-    <Content Include="Assets\Datatable\js\dataTables.bootstrap4.js" />
-    <Content Include="Assets\Datatable\js\dataTables.bootstrap4.min.js" />
-    <Content Include="Assets\Datatable\js\dataTables.foundation.js" />
-    <Content Include="Assets\Datatable\js\dataTables.foundation.min.js" />
-    <Content Include="Assets\Datatable\js\dataTables.jqueryui.js" />
-    <Content Include="Assets\Datatable\js\dataTables.jqueryui.min.js" />
-    <Content Include="Assets\Datatable\js\dataTables.semanticui.js" />
-    <Content Include="Assets\Datatable\js\dataTables.semanticui.min.js" />
-    <Content Include="Assets\Datatable\js\jquery.dataTables.js" />
-    <Content Include="Assets\Datatable\js\jquery.dataTables.min.js" />
     <Content Include="Crud.Master" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -123,12 +89,12 @@
       <DependentUpon>Crud.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
