@@ -1,0 +1,99 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Crud.master.cs" Inherits="CrudApplication.Crud" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to ASP.NET WEB from CRUD application</title>
+
+    <!-- Bootstrap, jQueryData table and fontawesome CSS setup -->
+    <link href="Assets/bootstrap.min.css" rel="stylesheet" />
+    <link href="Assets/Datatable/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <link href="Assets/Fontawesome/css/all.min.css" rel="stylesheet" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+   
+  <div class="container-fluid">
+    <div class="row">
+      <nav class="navbar navbar-default">
+        <!--Start of navbar-->
+        <div class="container-fluid">
+          <!-- Start of nav div container-->
+
+          <div class="navbar-header">
+            <!--Start of toogle navigation for mobile view-->
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+              aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">R. B.</a>
+          </div>
+          <!--End of toogle nagivation for mobile view-->
+
+          <div id="navbar" class="navbar-collapse collapse">
+
+            <ul class="nav navbar-nav">
+              <!--Start of dropdown menu-->
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#">Education</a></li>
+              <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">About Me<span
+                    class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Software Development</a></li>
+                  <li><a href="#">Hiking and cycling</a></li>
+                  <li><a href="#">Research and learning</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Projects<span
+                    class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Academic Projects</a></li>
+                  <li><a href="#">Industrial Projects</a></li>
+                </ul>
+              </li>
+
+              <li><a href="#">Contact</a></li>
+            </ul>
+            <!--End of dropdown menu-->
+          </div>
+
+        </div><!-- End of nav div container-->
+      </nav>
+      <!--End of navbar-->
+    </div>
+ 
+        <div class="row">
+        <!--Start of Master page contentpalaceholder-->
+        <div>
+              <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+        </div>
+        <!--End of Master page contentpalaceholder-->
+        </div>
+
+      <div class="row">
+        <!--Start of footer-->
+        <footer>
+            <p>&copy Developed by Raj Bhatta</p>
+        </footer>
+        <!--- End of footer-->
+      </div>
+
+  </div> <!--end of container-->
+
+    </form>
+
+    <!-- JQuery and fontawesome js setup -->
+    <script src="Assets/Bootstrap/js/jquery-3.5.1.min.js"></script>
+    <script src="Assets/Bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

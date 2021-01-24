@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace CrudApplication
 {
-    public partial class Default : System.Web.UI.Page
+    public partial class Crud : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
