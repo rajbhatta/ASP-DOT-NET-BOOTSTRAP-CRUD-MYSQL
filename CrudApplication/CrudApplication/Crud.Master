@@ -28,7 +28,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="~/">Home <span class="sr-only">(current)</span></a>
+        <a runat="server" class="nav-link" href="~/">Home <span class="sr-only">(current)</span></a>
       </li>
      
       <li class="nav-item dropdown">
@@ -54,20 +54,20 @@
     </ul>
   </div>
 </nav> 
-        <div class="row">
+       
         <!--Start of Master page contentpalaceholder-->
-        <div>
-              <asp:ContentPlaceHolder ID="bodyContentPlaceHolder" runat="server"></asp:ContentPlaceHolder>
-        </div>
+        <div class="container">
+            <asp:ContentPlaceHolder ID="bodyContentPlaceHolder" runat="server"></asp:ContentPlaceHolder>
+        </div>   
         <!--End of Master page contentpalaceholder-->
-        </div>
+       
 
      
         <!--Start of footer-->
         <footer>
             <div id="webFooter" class="container-fluid">
                 <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-12 test-center">
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                          © 2021 Developed By: <a class="text-dark" href="https://www.linkedin.com/in/raj-bhatta/">Raj Bhatta</a>
                     </div>
                 </div>
