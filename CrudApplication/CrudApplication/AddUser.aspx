@@ -80,7 +80,7 @@
 
     <div class="form-group col-md-4">
       <label>Available Date</label>
-        <asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>
+        <asp:Calendar ID="calAvailableDate" runat="server"></asp:Calendar>
     </div>
   </div>
 
@@ -99,9 +99,9 @@
  <div class="row">
   <div class="form-group col-xs-12 col-sm-12 col-md-12">
     <label>Comments</label>
-    <asp:textbox ID="txtBoxComments" runat="server" mode="MultiLine" class="form-control" maxlength="1200" Height="85px"  />
+    <asp:textbox ID="txtBoxComments" runat="server" mode="MultiLine" class="form-control" maxlength="1200" Height="85px"/>
   </div>
  </div>
 
-  <button ID="btnCreateUser" runat="server" class="btn btn-success">Create User</button>
+  <asp:Button ID="btnCreateUser" runat="server" OnClick="Button1_Click" Text="Create User" class="btn btn-success" />
 </asp:Content>
