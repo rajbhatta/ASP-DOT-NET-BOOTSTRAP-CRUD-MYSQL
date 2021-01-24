@@ -122,6 +122,8 @@
     </Compile>
     <Compile Include="Services\DbEnvironment\IDbPropertyService.cs" />
     <Compile Include="Services\DbEnvironment\MySqlDbPropertyService.cs" />
+    <Compile Include="Services\DbEnvironment\OracleDbPropertyService.cs" />
+    <Compile Include="Services\DbEnvironment\SqlServerDbPropertyService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Modals\" />
