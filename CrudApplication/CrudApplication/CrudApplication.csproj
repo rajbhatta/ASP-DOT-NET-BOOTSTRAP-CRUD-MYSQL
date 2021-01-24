@@ -120,6 +120,8 @@
     <Compile Include="ManageAccount.aspx.designer.cs">
       <DependentUpon>ManageAccount.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Services\DbEnvironment\IDbPropertyService.cs" />
+    <Compile Include="Services\DbEnvironment\MySqlDbPropertyService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Modals\" />
