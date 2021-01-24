@@ -46,8 +46,8 @@
           Users management with stored procedure
         </a>
        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="~/AddAccount.aspx">Add Account</a>
-          <a class="dropdown-item" href="~/ManageAccount.aspx">Manage Account</a>
+           <a runat="server" class="dropdown-item" href="~/AddAccount.aspx">Add Account</a>
+           <a runat="server" class="dropdown-item" href="~/ManageAccount.aspx">Manage Account</a>
         </div>
       </li>
 
