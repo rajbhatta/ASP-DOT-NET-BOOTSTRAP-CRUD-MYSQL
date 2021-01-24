@@ -91,6 +91,9 @@
     <Compile Include="Crud.Master.designer.cs">
       <DependentUpon>Crud.Master</DependentUpon>
     </Compile>
+    <Compile Include="Exception\MySqlException.cs" />
+    <Compile Include="Exception\OracleException.cs" />
+    <Compile Include="Exception\SqlServerException.cs" />
     <Compile Include="Modals\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="AddUser.aspx.cs">
@@ -121,15 +124,19 @@
     <Compile Include="ManageAccount.aspx.designer.cs">
       <DependentUpon>ManageAccount.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Services\Dao\IDaoService.cs" />
+    <Compile Include="Services\Dao\MySqlDaoService.cs" />
+    <Compile Include="Services\Dao\OracleDaoService.cs" />
+    <Compile Include="Services\Dao\SqlServiceDaoService.cs" />
+    <Compile Include="Services\DatabaseHandler\MySqlDatabaseHanlder.cs" />
+    <Compile Include="Services\DatabaseHandler\OracleDatabaseHandler.cs" />
+    <Compile Include="Services\DatabaseHandler\SqlServerDatabaseHanlder.cs" />
     <Compile Include="Services\DbEnvironment\IDbPropertyService.cs" />
     <Compile Include="Services\DbEnvironment\MySqlDbPropertyService.cs" />
     <Compile Include="Services\DbEnvironment\OracleDbPropertyService.cs" />
     <Compile Include="Services\DbEnvironment\SqlServerDbPropertyService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Modals\" />
-    <Folder Include="Services\" />
-    <Folder Include="Services\DataTransfer" />
     <Folder Include="Views\" />
   </ItemGroup>
   <PropertyGroup>
