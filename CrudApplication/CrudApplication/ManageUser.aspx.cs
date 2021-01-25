@@ -58,18 +58,18 @@ namespace CrudApplication
             String username = ((TextBox)grdViewUserList.Rows[e.RowIndex].Cells[4].Controls[0]).Text;
             String comment = ((TextBox)grdViewUserList.Rows[e.RowIndex].Cells[5].Controls[0]).Text;
 
+            //construct update SQL query
+            UserDataMySqlTransferService userDataMySqlTransferService = instantiateUserDataMySqlTransferService();
+            string updateSqlUserQuery = userDataMySqlTransferService.convertSqlQueryForUpdate(name, email, address, username, comment, id);
 
-            using (MySqlConnection con = new MySqlConnection(connectionString))
-            {
-                con.Open();
-                MySqlCommand cmd = new MySqlCommand("update tbl_user set name='" + name + "', email='" + email + "',address='" + address + "', username='" + username + "',comment='" + comment + "' where id='" + id + "' ", con);
-                int t = cmd.ExecuteNonQuery();
-                if (t == 0)
+            //run query to the database
+            MySqlDatabaseHanlder mysqlDatabaseHanlder = instantiateMySqlDatabaseHanlder();
+          int result= mysqlDatabaseHanlder.RunQueryToDatabase(updateSqlUserQuery);
+            if(result == 0)
                 {
-                    Response.Write("<script>alert('Unable to update the record...')</script>");
-                }
-                Response.Redirect("~/ManageUser.aspx");
+                Response.Write("<script>alert('Unable to update the record...')</script>");
             }
+            Response.Redirect("~/ManageUser.aspx");
         }
 
         protected void grdViewUserList_RowDeleting(object sender, GridViewDeleteEventArgs e)
@@ -78,8 +78,9 @@ namespace CrudApplication
 
             //get id
             int id = Convert.ToInt32(grdViewUserList.DataKeys[e.RowIndex].Value.ToString());
-            UserDataMySqlTransferService userDataMySqlTransferService = instantiateUserDataMySqlTransferService();
+
             //construct delete SQL query
+            UserDataMySqlTransferService userDataMySqlTransferService = instantiateUserDataMySqlTransferService();
             string deleteSqlUserQuery = userDataMySqlTransferService.createSqlQueryForDelete(id);
 
             //run query to the database

@@ -15,7 +15,7 @@ namespace CrudApplication.Services.DatabaseUtil
             return insertUserSqlQueryString;
         }
 
-        public string convertSqlQueryForUpdate(string name,string email, string address, string username, string comment, string id)
+        public string convertSqlQueryForUpdate(string name,string email, string address, string username, string comment, int id)
         {
             string updateQuery = "update tbl_user set name='" + name + "', email='" + email + "',address='" + address + "', username='" + username + "',comment='" + comment + "' where id='" + id + "' ";
             return updateQuery;
