@@ -6,7 +6,7 @@
 <img src="Assets/img/create-user-validation.png">
 
 ### 3. Create user email and password validation ###
-<img src="Assets/img/password-email-validation.png">
+<img src="Assets/img/Password-email-validation.png">
 
 ### 4. Gridview without data ###
 <img src="Assets/img/Grid-view-without-data.png">
