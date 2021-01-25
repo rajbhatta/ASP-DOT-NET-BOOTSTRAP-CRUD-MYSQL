@@ -80,6 +80,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Crud.Master" />
+    <Content Include="readme.MD" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -122,6 +123,7 @@
     <Compile Include="Services\DbEnvironment\SqlServerDbPropertyService.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Assets\img" />
     <Folder Include="DB-Script" />
   </ItemGroup>
   <PropertyGroup>
