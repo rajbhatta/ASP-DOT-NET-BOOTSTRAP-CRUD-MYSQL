@@ -18,7 +18,7 @@ namespace CrudApplication.Services.Dao
         }
         public int Save(User t)
         {
-            string queryString = _dataTransferService.ConvertUserToSqlQueryString(t);
+            string queryString = _dataTransferService.convertSQLQueryForSave(t);
             _mySqlDatabaseHanlder.SaveUserToDatabase(queryString);
             return 1;
         }

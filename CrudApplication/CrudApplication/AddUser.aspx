@@ -78,13 +78,13 @@
 
         <div class="form-group col-md-4">
             <label>Programming Skills</label><br>
-            <asp:CheckBox ID="chkBoxMachineLearning" runat="server"/> : Machine Learning <br>
-            <asp:CheckBox ID="chkBoxPython" runat="server"/> : Python <br>
-            <asp:CheckBox ID="chkBoxJava" runat="server"/> : Java <br>
-            <asp:CheckBox ID="chkBoxDatabase" runat="server"/> : Database Development <br>
-            <asp:CheckBox ID="chkBoxFrontEnd" runat="server"/> : Frontend Development <br>
-            <asp:CheckBox ID="chkBoxDotNet" runat="server"/> : Dot NET <br>
-            <asp:CheckBox ID="chkBoxBasicComputer" runat="server"/> : Basic Computer Skills
+            <asp:CheckBox ID="chkBoxMachineLearning" runat="server" Text="Machine Learning" />  
+            <asp:CheckBox ID="chkBoxPython" runat="server" Text="Python" />  
+            <asp:CheckBox ID="chkBoxJava" runat="server" Text="Java" /> 
+            <asp:CheckBox ID="chkBoxDatabase" runat="server" Text="Database Development" /> 
+            <asp:CheckBox ID="chkBoxFrontEnd" runat="server" Text="Frontend Development" /> 
+            <asp:CheckBox ID="chkBoxDotNet" runat="server" Text="Dot NET" /> 
+            <asp:CheckBox ID="chkBoxBasicComputer" runat="server" Text="Basic Computer Skills" /> 
         </div>
 
         <div class="form-group col-md-4">

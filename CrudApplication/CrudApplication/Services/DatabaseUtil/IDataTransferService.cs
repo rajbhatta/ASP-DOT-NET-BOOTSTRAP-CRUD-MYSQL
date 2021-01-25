@@ -10,7 +10,7 @@ namespace CrudApplication.Services.DatabaseUtil
     interface IDataTransferService<T>
     {
         //Creates query for insert.
-        string ConvertUserToSqlQueryString(T t);
+        string convertSQLQueryForSave(T t);
 
         //Creates query for update
          string convertSqlQueryForUpdate(string name, string email, string address, string username,

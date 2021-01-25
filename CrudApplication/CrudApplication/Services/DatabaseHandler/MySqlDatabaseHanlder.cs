@@ -15,12 +15,14 @@ namespace CrudApplication.Services.DatabaseHandler
         }
 
         //Saves users to the database
-        public void SaveUserToDatabase(string queryString)
+        public int SaveUserToDatabase(string queryString)
         {
             openConnection();
             MySqlCommand mySqlCommand = new MySqlCommand(queryString, _mySqlConnection);
-            mySqlCommand.ExecuteReader();
+            mySqlCommand.ExecuteNonQuery();
+            int returnedValue = (int)mySqlCommand.LastInsertedId;
             closeConnection();
+            return returnedValue;
         }
 
         //Run query to the database. A query can be update and delete.

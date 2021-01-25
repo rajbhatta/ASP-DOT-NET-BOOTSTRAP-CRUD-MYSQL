@@ -8,10 +8,17 @@ namespace CrudApplication.Services.DatabaseUtil
 {
     public class UserDataMySqlTransferService : IDataTransferService<User>
     {
-        public string ConvertUserToSqlQueryString(User user)
+        public string convertSQLQueryForSave(User user)
         {
             String insertUserSqlQueryString= "INSERT INTO tbl_user(name,email,address,address2,city,province,postalcode,gender,availability,username,password,comment)" +
                 "VALUES ('" + user.name + "','" + user.email + "','" + user.address + "','" + user.address2 + "','"+user.city+"','"+user.province+"','"+user.postalCode+"','"+user.gender+"','"+user.availability+"','"+user.username+"','"+user.password+"','"+user.comment+"')";
+            return insertUserSqlQueryString;
+        }
+
+        public string sqlQueryforSaveUserProgrammingSkill(User user, int userId)
+        {
+            String insertUserSqlQueryString = "INSERT INTO tbl_user_programming_skills(uid,skills)" +
+                 "VALUES ('" + userId + "','" + user.programmingSkills + "')";
             return insertUserSqlQueryString;
         }
 

@@ -24,9 +24,14 @@ namespace CrudApplication
         {
             User user = PopulateUserFromForm();
             UserDataMySqlTransferService userDataMySqlTransferService = instantiateUserDataMySqlTransferService();
-            string insertUserSqlQuery = userDataMySqlTransferService.ConvertUserToSqlQueryString(user);
+            string insertUserSqlQuery = userDataMySqlTransferService.convertSQLQueryForSave(user);
+          
             MySqlDatabaseHanlder mysqlDatabaseHanlder = instantiateMySqlDatabaseHanlder();
-            mysqlDatabaseHanlder.SaveUserToDatabase(insertUserSqlQuery);
+            int userId=mysqlDatabaseHanlder.SaveUserToDatabase(insertUserSqlQuery);
+
+            string insertUserSkillsQuery=userDataMySqlTransferService.sqlQueryforSaveUserProgrammingSkill(user, userId);
+            mysqlDatabaseHanlder.RunQueryToDatabase(insertUserSkillsQuery);
+
             Response.Redirect("~/ManageUser.aspx");
         }
 
@@ -51,6 +56,7 @@ namespace CrudApplication
             user.province = ddlProvince.SelectedValue;
             user.postalCode = txtBoxPostalCode.Text;
             user.gender = GetGenderValue();
+            user.programmingSkills=GetProgrammingSkills();
             user.availability = calAvailableDate.SelectedDate.ToShortDateString();
             user.username = txtBoxUsername.Text;
             user.password = HashPassword(txtBoxPassword.Text, new MD5CryptoServiceProvider());
@@ -68,6 +74,41 @@ namespace CrudApplication
                 value = rdBtnGenderFemale.Text;
             return value;
         }
+
+        private string GetProgrammingSkills()
+        {
+            string message = "";
+            if (chkBoxMachineLearning.Checked)
+            {
+                message = chkBoxMachineLearning.Text + " ";
+            }
+            if (chkBoxPython.Checked)
+            {
+                message += chkBoxPython.Text + " ";
+            }
+            if (chkBoxJava.Checked)
+            {
+                message += chkBoxJava.Text;
+            }
+            if (chkBoxDatabase.Checked)
+            {
+                message = chkBoxDatabase.Text + " ";
+            }
+            if (chkBoxFrontEnd.Checked)
+            {
+                message += chkBoxFrontEnd.Text + " ";
+            }
+            if (chkBoxDotNet.Checked)
+            {
+                message += chkBoxDotNet.Text;
+            }
+            if (chkBoxBasicComputer.Checked)
+            {
+                message += chkBoxBasicComputer.Text;
+            }
+            return message;
+        }
+    
 
         private string HashPassword(string input, HashAlgorithm algorithm)
         {
