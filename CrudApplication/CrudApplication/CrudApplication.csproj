@@ -48,6 +48,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data, Version=8.0.23.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -131,6 +132,8 @@
     <Compile Include="Services\DatabaseHandler\MySqlDatabaseHanlder.cs" />
     <Compile Include="Services\DatabaseHandler\OracleDatabaseHandler.cs" />
     <Compile Include="Services\DatabaseHandler\SqlServerDatabaseHanlder.cs" />
+    <Compile Include="Services\DatabaseUtil\IDataTransferService.cs" />
+    <Compile Include="Services\DatabaseUtil\UserDataMySqlTransferService.cs" />
     <Compile Include="Services\DbEnvironment\IDbPropertyService.cs" />
     <Compile Include="Services\DbEnvironment\MySqlDbPropertyService.cs" />
     <Compile Include="Services\DbEnvironment\OracleDbPropertyService.cs" />

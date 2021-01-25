@@ -2,31 +2,31 @@ namespace CrudApplication.Modals
 {
     public class User
     {
-        private string name { get; set; }
+        public string name { get; set; }
 
-        private string email { get; set; }
-        
-        private string address { get; set; }
-        
-        private string address2 { get; set; }
-        
-        private string city { get; set; }
-        
-        private int province { get; set; }
-        
-        private string postalCode { get; set; }
-        
-        private int gender { get; set; }
-        
-        private string programmingSkills { get; set; }
-        
-        private string availability { get; set; }
-        
-        private string username { get; set; }
-        
-        private string password { get; set; }
-        
-        private string comment { get; set; }
+        public string email { get; set; }
+
+        public string address { get; set; }
+
+        public string address2 { get; set; }
+
+        public string city { get; set; }
+
+        public string province { get; set; }
+
+        public string postalCode { get; set; }
+
+        public string gender { get; set; }
+
+        public string programmingSkills { get; set; }
+
+        public string availability { get; set; }
+
+        public string username { get; set; }
+
+        public string password { get; set; }
+
+        public string comment { get; set; }
 
 
     }
