@@ -49,7 +49,7 @@ namespace CrudApplication
             return new MySqlDbPropertyService().GetConnectionString() ;
         }
 
-        protected void grdViewUserList_RowEditing1(object sender, GridViewEditEventArgs e)
+        protected void grdViewUserList_RowEditing(object sender, GridViewEditEventArgs e)
         {
             grdViewUserList.EditIndex = e.NewEditIndex;
             PopulateGridView();

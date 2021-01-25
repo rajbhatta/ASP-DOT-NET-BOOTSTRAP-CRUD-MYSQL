@@ -7,7 +7,7 @@
                         <h2>List of users: </h2>
                     </div>
                     <div class="row">
-                    <asp:GridView ID="grdViewUserList" runat="server" CssClass="table table-responsive table-striped" AllowSorting="True" AllowPaging="True" AutoGenerateColumns="False" OnRowEditing="grdViewUserList_RowEditing1" OnRowUpdating="grdViewUserList_RowUpdating" DataKeyNames="id" OnRowCancelingEdit="grdViewUserList_RowCancelingEdit" OnRowDeleting="grdViewUserList_RowDeleting">
+                    <asp:GridView ID="grdViewUserList" runat="server" CssClass="table table-responsive table-striped" AllowSorting="True" AllowPaging="True" AutoGenerateColumns="False" OnRowEditing="grdViewUserList_RowEditing" OnRowUpdating="grdViewUserList_RowUpdating" DataKeyNames="id" OnRowCancelingEdit="grdViewUserList_RowCancelingEdit" OnRowDeleting="grdViewUserList_RowDeleting">
                         <Columns>
                             <asp:BoundField DataField="id" HeaderText="S.No" ReadOnly="True" />
                             <asp:BoundField DataField="name" HeaderText="Name" />
