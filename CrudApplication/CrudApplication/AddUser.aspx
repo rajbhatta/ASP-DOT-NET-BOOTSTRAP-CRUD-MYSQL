@@ -104,6 +104,8 @@
             <label for="txtBoxPassword">Password</label>
             <asp:TextBox ID="txtBoxPassword" runat="server" TextMode="Password" class="form-control" placeholder="Please enter password.."></asp:TextBox>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="*** Please provide password" ControlToValidate="txtBoxPassword" ForeColor="#FF3300"></asp:RequiredFieldValidator>
+        &nbsp;<br />
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="txtBoxPassword" ErrorMessage="*** Please provide at least 2 upper case, 3 special characters and 1 numbers ..." ForeColor="#CC0000" ValidationExpression="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&amp;])[A-Za-z\d@$!%*?&amp;]{6,}$"></asp:RegularExpressionValidator>
         </div>
     </div>
 
