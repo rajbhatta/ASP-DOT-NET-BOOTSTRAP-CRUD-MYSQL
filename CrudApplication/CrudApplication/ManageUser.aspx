@@ -7,8 +7,9 @@
                         <h2>List of users: </h2>
                     </div>
                     <div class="row">
-                    <asp:GridView ID="grdViewUserList" CssClass="table table-responsive table-striped" runat="server" AllowSorting="True" AllowPaging="True" AutoGenerateColumns="False" OnRowDeleting="grdViewUserList_RowDeleting" OnRowEditing="grdViewUserList_RowEditing" OnRowUpdating="grdViewUserList_RowUpdating">
+                    <asp:GridView ID="grdViewUserList" runat="server" CssClass="table table-responsive table-striped" AllowSorting="True" AllowPaging="True" AutoGenerateColumns="False" OnRowEditing="grdViewUserList_RowEditing1" OnRowUpdating="grdViewUserList_RowUpdating" DataKeyNames="id" OnRowCancelingEdit="grdViewUserList_RowCancelingEdit" OnRowDeleting="grdViewUserList_RowDeleting">
                         <Columns>
+                            <asp:BoundField DataField="id" HeaderText="S.No" ReadOnly="True" />
                             <asp:BoundField DataField="name" HeaderText="Name" />
                             <asp:BoundField DataField="email" HeaderText="Email" />
                             <asp:BoundField DataField="gender" HeaderText="Gender" />
@@ -16,7 +17,12 @@
                             <asp:BoundField DataField="province" HeaderText="Province" />
                             <asp:BoundField DataField="availability" HeaderText="Availability" />
                             <asp:BoundField DataField="comment" HeaderText="Comment" />
-                            <asp:CommandField ButtonType="Button" ShowEditButton="True" />
+                            <asp:CommandField ButtonType="Button" ShowEditButton="True" >
+                            <ControlStyle BackColor="#99FF33" />
+                            </asp:CommandField>
+                            <asp:CommandField ButtonType="Button" ShowDeleteButton="True">
+                            <ControlStyle BackColor="Red" />
+                            </asp:CommandField>
                         </Columns>
                     </asp:GridView>
            
