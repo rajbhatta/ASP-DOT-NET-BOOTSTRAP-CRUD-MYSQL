@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using CrudApplication.Modals;
 using CrudApplication.Services.DatabaseHandler;
@@ -15,25 +16,21 @@ namespace CrudApplication.Services.Dao
             _mySqlDatabaseHanlder = mySqlDatabaseHandler;
             _dataTransferService = new UserDataMySqlTransferService();
         }
-        public void Save(User t)
+        public int Save(User t)
         {
             string queryString = _dataTransferService.ConvertUserToSqlQueryString(t);
             _mySqlDatabaseHanlder.SaveUserToDatabase(queryString);
+            return 1;
         }
-
-        public List<User> Get()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public User GetById(User t)
-        {
-            throw new System.NotImplementedException();
-        }
-
+      
         public void Delete(User t)
         {
             throw new System.NotImplementedException();
+        }
+
+        public int update(User t)
+        {
+            throw new NotImplementedException();
         }
     }
 }

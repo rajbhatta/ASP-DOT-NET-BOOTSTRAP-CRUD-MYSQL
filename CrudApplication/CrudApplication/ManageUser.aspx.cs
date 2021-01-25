@@ -1,4 +1,6 @@
-﻿using CrudApplication.Services.DbEnvironment;
+﻿using CrudApplication.Services.DatabaseHandler;
+using CrudApplication.Services.DatabaseUtil;
+using CrudApplication.Services.DbEnvironment;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -24,29 +26,20 @@ namespace CrudApplication
         private void PopulateGridView()
         {
 
-            using (MySqlConnection con = new MySqlConnection(getMySqlConnectionString()))
+            MySqlDatabaseHanlder mySqlDatabaseHanlder = instantiateMySqlDatabaseHanlder();
+            MySqlCommand mySqlCommand = mySqlDatabaseHanlder.provideMySqlCommandForSelectQuery();
+
+            using (MySqlDataAdapter mySqlDataAdapter = new MySqlDataAdapter())
             {
-                using (MySqlCommand cmd = new MySqlCommand("SELECT * from tbl_user"))
+                mySqlCommand.Connection = mySqlDatabaseHanlder.provideCurrentConection();
+                mySqlDataAdapter.SelectCommand = mySqlCommand;
+                using (DataTable dataTable = new DataTable())
                 {
-                    using (MySqlDataAdapter da = new MySqlDataAdapter())
-                    {
-                        cmd.Connection = con;
-                        da.SelectCommand = cmd;
-                        using (DataTable dt = new DataTable())
-                        {
-                            da.Fill(dt);
-                            grdViewUserList.DataSource = dt;
-                            grdViewUserList.DataBind();
-                        }
-                    }
+                    mySqlDataAdapter.Fill(dataTable);
+                    grdViewUserList.DataSource = dataTable;
+                    grdViewUserList.DataBind();
                 }
             }
-
-        }
-
-        private String getMySqlConnectionString()
-        {
-            return new MySqlDbPropertyService().GetConnectionString() ;
         }
 
         protected void grdViewUserList_RowEditing(object sender, GridViewEditEventArgs e)
@@ -82,20 +75,18 @@ namespace CrudApplication
         protected void grdViewUserList_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
             String connectionString = ConfigurationManager.ConnectionStrings["WebAppConnectionString"].ToString();
-            int id = Convert.ToInt32(grdViewUserList.DataKeys[e.RowIndex].Value.ToString());
-            using (MySqlConnection con = new MySqlConnection(connectionString))
-            {
-                con.Open();
-                MySqlCommand cmd = new MySqlCommand("DELETE from tbl_user WHERE id='" + id + "'", con);
-                int t = cmd.ExecuteNonQuery();
-                if (t > 0)
-                {
-                    Response.Write("<script>alert('Data has been deleted')</script>");
-                    grdViewUserList.EditIndex = -1;
-                    PopulateGridView();
-                }
-            }
 
+            //get id
+            int id = Convert.ToInt32(grdViewUserList.DataKeys[e.RowIndex].Value.ToString());
+            UserDataMySqlTransferService userDataMySqlTransferService = instantiateUserDataMySqlTransferService();
+            //construct delete SQL query
+            string deleteSqlUserQuery = userDataMySqlTransferService.createSqlQueryForDelete(id);
+
+            //run query to the database
+            MySqlDatabaseHanlder mysqlDatabaseHanlder = instantiateMySqlDatabaseHanlder();
+            mysqlDatabaseHanlder.RunQueryToDatabase(deleteSqlUserQuery);
+
+            //redirect once completed
             Response.Redirect("~/ManageUser.aspx");
         }
 
@@ -110,6 +101,23 @@ namespace CrudApplication
             grdViewUserList.EditIndex = e.NewEditIndex;
             PopulateGridView();
         }
+
+        private UserDataMySqlTransferService instantiateUserDataMySqlTransferService()
+        {
+            return new UserDataMySqlTransferService();
+        }
+
+        private String getMySqlConnectionString()
+        {
+            return new MySqlDbPropertyService().GetConnectionString();
+        }
+
+
+        private MySqlDatabaseHanlder instantiateMySqlDatabaseHanlder()
+        {
+            return new MySqlDatabaseHanlder(new MySqlDbPropertyService());
+        }
+
     }
- 
+
 }

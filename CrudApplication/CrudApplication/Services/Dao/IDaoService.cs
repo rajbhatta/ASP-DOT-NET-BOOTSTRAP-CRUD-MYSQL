@@ -9,9 +9,8 @@ namespace CrudApplication.Services.Dao
 {
     interface IDaoService<T>
     {
-        void Save(T t);
-        List<T> Get();
-        T GetById(T t);
+        int Save(T t);
+        int update(T t);
         void Delete(T t);
     }
 }

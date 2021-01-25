@@ -14,5 +14,17 @@ namespace CrudApplication.Services.DatabaseUtil
                 "VALUES ('" + user.name + "','" + user.email + "','" + user.address + "','" + user.address2 + "','"+user.city+"','"+user.province+"','"+user.postalCode+"','"+user.gender+"','"+user.availability+"','"+user.username+"','"+user.password+"','"+user.comment+"')";
             return insertUserSqlQueryString;
         }
+
+        public string convertSqlQueryForUpdate(string name,string email, string address, string username, string comment, string id)
+        {
+            string updateQuery = "update tbl_user set name='" + name + "', email='" + email + "',address='" + address + "', username='" + username + "',comment='" + comment + "' where id='" + id + "' ";
+            return updateQuery;
+        }
+
+        public string createSqlQueryForDelete(int id)
+        {
+            string deleteUserQuery = "DELETE from tbl_user WHERE id='" + id + "'";
+            return deleteUserQuery;
+        }
     }
 }
