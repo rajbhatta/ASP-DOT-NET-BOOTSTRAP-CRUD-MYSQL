@@ -15,7 +15,7 @@
                             <asp:BoundField DataField="address" HeaderText="Address" />
                             <asp:BoundField DataField="username" HeaderText="Username" />
                             <asp:BoundField DataField="comment" HeaderText="Comment" />
-                            <asp:CommandField ButtonType="Button" ShowEditButton="True" >
+                            <asp:CommandField ButtonType="Button" ShowEditButton="True">
                             <ControlStyle BackColor="#99FF33" />
                             </asp:CommandField>
                             <asp:CommandField ButtonType="Button" ShowDeleteButton="True">

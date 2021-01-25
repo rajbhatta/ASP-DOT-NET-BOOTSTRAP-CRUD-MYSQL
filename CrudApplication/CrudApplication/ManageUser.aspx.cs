@@ -61,17 +61,15 @@ namespace CrudApplication
             int id = Convert.ToInt32(grdViewUserList.DataKeys[e.RowIndex].Value.ToString());
             String name = ((TextBox)grdViewUserList.Rows[e.RowIndex].Cells[1].Controls[0]).Text;
             String email = ((TextBox)grdViewUserList.Rows[e.RowIndex].Cells[2].Controls[0]).Text;
-            String gender = ((TextBox)grdViewUserList.Rows[e.RowIndex].Cells[3].Controls[0]).Text;
-            String city = ((TextBox)grdViewUserList.Rows[e.RowIndex].Cells[4].Controls[0]).Text;
-            String province = ((TextBox)grdViewUserList.Rows[e.RowIndex].Cells[5].Controls[0]).Text;
-            String availability = ((TextBox)grdViewUserList.Rows[e.RowIndex].Cells[6].Controls[0]).Text;
-            String comment = ((TextBox)grdViewUserList.Rows[e.RowIndex].Cells[7].Controls[0]).Text;
+            String address = ((TextBox)grdViewUserList.Rows[e.RowIndex].Cells[3].Controls[0]).Text;
+            String username = ((TextBox)grdViewUserList.Rows[e.RowIndex].Cells[4].Controls[0]).Text;
+            String comment = ((TextBox)grdViewUserList.Rows[e.RowIndex].Cells[5].Controls[0]).Text;
 
 
             using (MySqlConnection con = new MySqlConnection(connectionString))
             {
                 con.Open();
-                MySqlCommand cmd = new MySqlCommand("update tbl_user set name='" + name + "', email='" + email + "',gender='" + gender + "',city='" + city + "' where id='" + id + "' ", con);
+                MySqlCommand cmd = new MySqlCommand("update tbl_user set name='" + name + "', email='" + email + "',address='" + address + "', username='" + username + "',comment='" + comment + "' where id='" + id + "' ", con);
                 int t = cmd.ExecuteNonQuery();
                 if (t > 0)
                 {
