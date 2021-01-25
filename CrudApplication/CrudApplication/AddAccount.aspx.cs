@@ -24,6 +24,8 @@ namespace CrudApplication
             User user = PopulateUserFromForm();
             UserDataMySqlTransferService userDataMySqlTransferService = instantiateUserDataMySqlTransferService();
             string insertUserSqlQuery = userDataMySqlTransferService.ConvertUserToSqlQueryString(user);
+            MySqlDatabaseHanlder mysqlDatabaseHanlder = instantiateMySqlDatabaseHanlder();
+            mysqlDatabaseHanlder.SaveUserToDatabase(insertUserSqlQuery);
         }
 
         private MySqlDatabaseHanlder instantiateMySqlDatabaseHanlder()
@@ -51,7 +53,7 @@ namespace CrudApplication
             user.username = txtBoxUsername.Text;
             user.password = HashPassword(txtBoxPassword.Text, new MD5CryptoServiceProvider());
             ;
-            user.comment = txtBoxComments.Text;
+            user.comment = txtBoxComment.Text;
             return user;
         }
 

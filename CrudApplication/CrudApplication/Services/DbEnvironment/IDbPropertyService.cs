@@ -2,12 +2,6 @@
 {
     public interface IDbPropertyService
     {
-        string GetBaseUrl();
-        string GetUserName();
-        string GetPassword();
-        string GetDatabaseName();
-
-        string GetProviderName();
-        string GetCompleteMySqlConnectionString();
+        string GetConnectionString();
     }
 }

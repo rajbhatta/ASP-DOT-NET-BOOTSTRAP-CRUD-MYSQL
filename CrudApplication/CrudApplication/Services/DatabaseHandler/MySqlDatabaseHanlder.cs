@@ -19,17 +19,13 @@ namespace CrudApplication.Services.DatabaseHandler
             _mySqlConnection.Open();
             MySqlCommand mySqlCommand = new MySqlCommand(queryString,_mySqlConnection);
             mySqlCommand.ExecuteReader();
+            _mySqlConnection.CloseAsync();
         }
 
         private MySqlConnection CreateDbConnection()
         {
-            string mySqlConnectionString = _dbPropertyService.GetCompleteMySqlConnectionString();
+            string mySqlConnectionString = _dbPropertyService.GetConnectionString();
             return new MySqlConnection(mySqlConnectionString);
-        }
-
-        private void CloseConnection()
-        {
-            _mySqlConnection.CloseAsync();
         }
     }
 }
