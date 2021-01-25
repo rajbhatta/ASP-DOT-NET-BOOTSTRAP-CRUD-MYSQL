@@ -53,7 +53,6 @@ namespace CrudApplication
             user.availability = calAvailableDate.SelectedDate.ToShortDateString();
             user.username = txtBoxUsername.Text;
             user.password = HashPassword(txtBoxPassword.Text, new MD5CryptoServiceProvider());
-            ;
             user.comment = txtBoxComment.Text;
             return user;
         }
