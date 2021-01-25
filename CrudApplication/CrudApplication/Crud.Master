@@ -53,16 +53,7 @@
                     </div>
                 </li>
 
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Users management with stored procedure
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a runat="server" class="dropdown-item" href="~/AddAccount.aspx">Add Account</a>
-                        <a runat="server" class="dropdown-item" href="~/ManageAccount.aspx">Manage Account</a>
-                    </div>
-                </li>
-
+             
             </ul>
         </div>
     </nav>

@@ -71,9 +71,9 @@ namespace CrudApplication
                 con.Open();
                 MySqlCommand cmd = new MySqlCommand("update tbl_user set name='" + name + "', email='" + email + "',address='" + address + "', username='" + username + "',comment='" + comment + "' where id='" + id + "' ", con);
                 int t = cmd.ExecuteNonQuery();
-                if (t > 0)
+                if (t == 0)
                 {
-                    Response.Write("<script>alert('Data has been updated')</script>");
+                    Response.Write("<script>alert('Unable to update the record...')</script>");
                 }
                 Response.Redirect("~/ManageUser.aspx");
             }

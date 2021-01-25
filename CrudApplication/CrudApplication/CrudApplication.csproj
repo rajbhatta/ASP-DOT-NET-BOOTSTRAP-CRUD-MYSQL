@@ -71,8 +71,6 @@
     <Content Include="packages.config" />
     <Content Include="AddUser.aspx" />
     <Content Include="ManageUser.aspx" />
-    <Content Include="AddAccount.aspx" />
-    <Content Include="ManageAccount.aspx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -93,8 +91,6 @@
       <DependentUpon>Crud.Master</DependentUpon>
     </Compile>
     <Compile Include="Exception\MySqlException.cs" />
-    <Compile Include="Exception\OracleException.cs" />
-    <Compile Include="Exception\SqlServerException.cs" />
     <Compile Include="Modals\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="AddUser.aspx.cs">
@@ -111,20 +107,6 @@
     <Compile Include="ManageUser.aspx.designer.cs">
       <DependentUpon>ManageUser.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AddAccount.aspx.cs">
-      <DependentUpon>AddAccount.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AddAccount.aspx.designer.cs">
-      <DependentUpon>AddAccount.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ManageAccount.aspx.cs">
-      <DependentUpon>ManageAccount.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ManageAccount.aspx.designer.cs">
-      <DependentUpon>ManageAccount.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Services\Dao\IDaoService.cs" />
     <Compile Include="Services\Dao\MySqlDaoService.cs" />
     <Compile Include="Services\Dao\OracleDaoService.cs" />
@@ -139,9 +121,7 @@
     <Compile Include="Services\DbEnvironment\OracleDbPropertyService.cs" />
     <Compile Include="Services\DbEnvironment\SqlServerDbPropertyService.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
