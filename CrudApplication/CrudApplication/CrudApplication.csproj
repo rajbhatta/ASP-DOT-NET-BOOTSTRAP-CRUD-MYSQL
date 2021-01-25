@@ -110,7 +110,7 @@
     <Compile Include="Services\Dao\IDaoService.cs" />
     <Compile Include="Services\Dao\MySqlDaoService.cs" />
     <Compile Include="Services\Dao\OracleDaoService.cs" />
-    <Compile Include="Services\Dao\SqlServiceDaoService.cs" />
+    <Compile Include="Services\Dao\SqlServerDaoService.cs" />
     <Compile Include="Services\DatabaseHandler\MySqlDatabaseHanlder.cs" />
     <Compile Include="Services\DatabaseHandler\OracleDatabaseHandler.cs" />
     <Compile Include="Services\DatabaseHandler\SqlServerDatabaseHanlder.cs" />
@@ -121,7 +121,9 @@
     <Compile Include="Services\DbEnvironment\OracleDbPropertyService.cs" />
     <Compile Include="Services\DbEnvironment\SqlServerDbPropertyService.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="DB-Script" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

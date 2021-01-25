@@ -25,7 +25,6 @@ namespace CrudApplication
 
         private void PopulateGridView()
         {
-
             MySqlDatabaseHanlder mySqlDatabaseHanlder = instantiateMySqlDatabaseHanlder();
             MySqlCommand mySqlCommand = mySqlDatabaseHanlder.provideMySqlCommandForSelectQuery();
 
@@ -52,23 +51,25 @@ namespace CrudApplication
         {
             String connectionString = ConfigurationManager.ConnectionStrings["WebAppConnectionString"].ToString();
             int id = Convert.ToInt32(grdViewUserList.DataKeys[e.RowIndex].Value.ToString());
-            String name = ((TextBox)grdViewUserList.Rows[e.RowIndex].Cells[1].Controls[0]).Text;
-            String email = ((TextBox)grdViewUserList.Rows[e.RowIndex].Cells[2].Controls[0]).Text;
-            String address = ((TextBox)grdViewUserList.Rows[e.RowIndex].Cells[3].Controls[0]).Text;
-            String username = ((TextBox)grdViewUserList.Rows[e.RowIndex].Cells[4].Controls[0]).Text;
-            String comment = ((TextBox)grdViewUserList.Rows[e.RowIndex].Cells[5].Controls[0]).Text;
+            String name = ((TextBox) grdViewUserList.Rows[e.RowIndex].Cells[1].Controls[0]).Text;
+            String email = ((TextBox) grdViewUserList.Rows[e.RowIndex].Cells[2].Controls[0]).Text;
+            String address = ((TextBox) grdViewUserList.Rows[e.RowIndex].Cells[3].Controls[0]).Text;
+            String username = ((TextBox) grdViewUserList.Rows[e.RowIndex].Cells[4].Controls[0]).Text;
+            String comment = ((TextBox) grdViewUserList.Rows[e.RowIndex].Cells[5].Controls[0]).Text;
 
             //construct update SQL query
             UserDataMySqlTransferService userDataMySqlTransferService = instantiateUserDataMySqlTransferService();
-            string updateSqlUserQuery = userDataMySqlTransferService.convertSqlQueryForUpdate(name, email, address, username, comment, id);
+            string updateSqlUserQuery =
+                userDataMySqlTransferService.convertSqlQueryForUpdate(name, email, address, username, comment, id);
 
             //run query to the database
             MySqlDatabaseHanlder mysqlDatabaseHanlder = instantiateMySqlDatabaseHanlder();
-          int result= mysqlDatabaseHanlder.RunQueryToDatabase(updateSqlUserQuery);
-            if(result == 0)
-                {
+            int result = mysqlDatabaseHanlder.RunQueryToDatabase(updateSqlUserQuery);
+            if (result == 0)
+            {
                 Response.Write("<script>alert('Unable to update the record...')</script>");
             }
+
             Response.Redirect("~/ManageUser.aspx");
         }
 
@@ -118,7 +119,5 @@ namespace CrudApplication
         {
             return new MySqlDatabaseHanlder(new MySqlDbPropertyService());
         }
-
     }
-
 }

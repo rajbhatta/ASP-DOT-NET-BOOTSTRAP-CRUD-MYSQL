@@ -11,45 +11,53 @@ namespace CrudApplication.Services.DatabaseHandler
         public MySqlDatabaseHanlder(IDbPropertyService dbPropertyService)
         {
             _dbPropertyService = dbPropertyService;
-            _mySqlConnection= CreateDbConnection();
+            _mySqlConnection = CreateDbConnection();
         }
 
+        //Saves users to the database
         public void SaveUserToDatabase(string queryString)
         {
             openConnection();
-            MySqlCommand mySqlCommand = new MySqlCommand(queryString,_mySqlConnection);
+            MySqlCommand mySqlCommand = new MySqlCommand(queryString, _mySqlConnection);
             mySqlCommand.ExecuteReader();
             closeConnection();
         }
 
+        //Run query to the database. A query can be update and delete.
         public int RunQueryToDatabase(string queryString)
         {
             openConnection();
             MySqlCommand mySqlCommand = new MySqlCommand(queryString, _mySqlConnection);
-            int returnedValue= mySqlCommand.ExecuteNonQuery();
+            int returnedValue = mySqlCommand.ExecuteNonQuery();
             closeConnection();
             return returnedValue;
         }
 
+        //Provides MySqlCommand required for GridView
         public MySqlCommand provideMySqlCommandForSelectQuery()
         {
             return new MySqlCommand("SELECT * from tbl_user");
         }
 
+        //Provides current connection
         public MySqlConnection provideCurrentConection()
         {
             return _mySqlConnection;
         }
 
+        //Opens database connection
         private void openConnection()
         {
             _mySqlConnection.Open();
         }
 
+        //Closes database connection
         private void closeConnection()
         {
             _mySqlConnection.CloseAsync();
         }
+
+        //Creates database connection
         private MySqlConnection CreateDbConnection()
         {
             string mySqlConnectionString = _dbPropertyService.GetConnectionString();

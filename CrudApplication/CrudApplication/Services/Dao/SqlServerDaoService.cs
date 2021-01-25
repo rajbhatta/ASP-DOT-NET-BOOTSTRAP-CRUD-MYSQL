@@ -3,7 +3,7 @@ using CrudApplication.Modals;
 
 namespace CrudApplication.Services.Dao
 {
-    public class OracleDaoService: IDaoService<User>
+    public class SqlServerDaoService : IDaoService<User>
     {
         public int Save(User t)
         {
