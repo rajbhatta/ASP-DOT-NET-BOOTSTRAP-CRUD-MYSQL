@@ -7,15 +7,13 @@
                         <h2>List of users: </h2>
                     </div>
                     <div class="row">
-                    <asp:GridView ID="grdViewUserList" runat="server" AllowSorting="True" AllowPaging="True" AutoGenerateColumns="False" OnRowUpdating="grdViewUserList_RowUpdating" DataKeyNames="id" OnRowCancelingEdit="grdViewUserList_RowCancelingEdit" OnRowDeleting="grdViewUserList_RowDeleting" OnRowEditing="grdViewUserList_RowEditing1">
+                    <asp:GridView ID="grdViewUserList" CssClass="table table-responsive table-striped" runat="server" AllowSorting="True" AllowPaging="True" AutoGenerateColumns="False" OnRowUpdating="grdViewUserList_RowUpdating" DataKeyNames="id" OnRowCancelingEdit="grdViewUserList_RowCancelingEdit" OnRowDeleting="grdViewUserList_RowDeleting" OnRowEditing="grdViewUserList_RowEditing1">
                         <Columns>
                             <asp:BoundField DataField="id" HeaderText="S.No" ReadOnly="True" />
                             <asp:BoundField DataField="name" HeaderText="Name" />
                             <asp:BoundField DataField="email" HeaderText="Email" />
-                            <asp:BoundField DataField="gender" HeaderText="Gender" />
-                            <asp:BoundField DataField="city" HeaderText="City" />
-                            <asp:BoundField DataField="province" HeaderText="Province" />
-                            <asp:BoundField DataField="availability" HeaderText="Availability" />
+                            <asp:BoundField DataField="address" HeaderText="Address" />
+                            <asp:BoundField DataField="username" HeaderText="Username" />
                             <asp:BoundField DataField="comment" HeaderText="Comment" />
                             <asp:CommandField ButtonType="Button" ShowEditButton="True" >
                             <ControlStyle BackColor="#99FF33" />
