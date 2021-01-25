@@ -77,6 +77,7 @@ namespace CrudApplication
                 {
                     Response.Write("<script>alert('Data has been updated')</script>");
                 }
+                Response.Redirect("~/ManageUser.aspx");
             }
         }
 
@@ -96,11 +97,19 @@ namespace CrudApplication
                     PopulateGridView();
                 }
             }
+
+            Response.Redirect("~/ManageUser.aspx");
         }
 
         protected void grdViewUserList_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
         {
             grdViewUserList.EditIndex = -1;
+            PopulateGridView();
+        }
+
+        protected void grdViewUserList_RowEditing1(object sender, GridViewEditEventArgs e)
+        {
+            grdViewUserList.EditIndex = e.NewEditIndex;
             PopulateGridView();
         }
     }

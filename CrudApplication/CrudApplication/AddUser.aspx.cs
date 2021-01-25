@@ -27,6 +27,7 @@ namespace CrudApplication
             string insertUserSqlQuery = userDataMySqlTransferService.ConvertUserToSqlQueryString(user);
             MySqlDatabaseHanlder mysqlDatabaseHanlder = instantiateMySqlDatabaseHanlder();
             mysqlDatabaseHanlder.SaveUserToDatabase(insertUserSqlQuery);
+            Response.Redirect("~/ManageUser.aspx");
         }
 
         private MySqlDatabaseHanlder instantiateMySqlDatabaseHanlder()
