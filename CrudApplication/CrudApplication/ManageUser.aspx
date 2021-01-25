@@ -2,11 +2,12 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="bodyContentPlaceHolder" runat="server">
-    <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12">
-                <h2>Onboarded user to the system: </h2>
-                <p>
-                    <asp:GridView ID="grdViewUserList" runat="server" AutoGenerateColumns="False">
+                <div class="container">
+                    <div class="row">
+                        <h2>List of users: </h2>
+                    </div>
+                    <div class="row">
+                    <asp:GridView ID="grdViewUserList" CssClass="table table-responsive table-striped" runat="server" AllowSorting="True" AllowPaging="True" AutoGenerateColumns="False" OnRowDeleting="grdViewUserList_RowDeleting" OnRowEditing="grdViewUserList_RowEditing" OnRowUpdating="grdViewUserList_RowUpdating">
                         <Columns>
                             <asp:BoundField DataField="name" HeaderText="Name" />
                             <asp:BoundField DataField="email" HeaderText="Email" />
@@ -15,11 +16,10 @@
                             <asp:BoundField DataField="province" HeaderText="Province" />
                             <asp:BoundField DataField="availability" HeaderText="Availability" />
                             <asp:BoundField DataField="comment" HeaderText="Comment" />
+                            <asp:CommandField ButtonType="Button" ShowEditButton="True" />
                         </Columns>
                     </asp:GridView>
-                </p>
-
-
-         </div>
-    </div>
+           
+                   </div>
+                </div>
 </asp:Content>
