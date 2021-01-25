@@ -13,25 +13,30 @@
         <div class="form-group col-md-6">
             <label for="txtBoxName">Name</label>
             <asp:TextBox ID="txtBoxName" runat="server" class="form-control" placeholder="Please enter name.."></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="*** Please provide valid name ... " ControlToValidate="txtBoxName" ForeColor="Red"></asp:RequiredFieldValidator>
         </div>
 
         <div class="form-group col-md-6">
             <label for="txtBoxEmail">Email</label>
             <asp:TextBox ID="txtBoxEmail" runat="server" class="form-control" placeholder="Please enter email.."></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="*** Please provide email address" ControlToValidate="txtBoxEmail" ForeColor="#CC3300"></asp:RequiredFieldValidator>
+            <br />
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="*** Please provide valid email address ....." ControlToValidate="txtBoxEmail" ForeColor="#FF3300" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator> 
         </div>
     </div>
 
     <div class="row">
         <div class="form-group col-xs-12 col-sm-12 col-md-12">
             <label for="txtBoxAddress">Address</label>
-            <asp:TextBox ID="txtBoxAddress" runat="server" class="form-control" placeholder="Please enter address.."></asp:TextBox>
+         <asp:TextBox ID="txtBoxAddress" runat="server" class="form-control" placeholder="Please enter address.."></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="*** Please provide valid address ....." ControlToValidate="txtBoxAddress" ForeColor="#FF3300"></asp:RequiredFieldValidator>
         </div>
     </div>
 
     <div class="row">
         <div class="form-group col-xs-12 col-sm-12 col-md-12">
             <label for="txtBoxAddress2">Address 2</label>
-            <asp:TextBox ID="txtBoxAddress2" runat="server" class="form-control" placeholder="Please enter address 2.."></asp:TextBox>
+&nbsp;<asp:TextBox ID="txtBoxAddress2" runat="server" class="form-control" placeholder="Please enter address 2.."></asp:TextBox>
         </div>
     </div>
 
@@ -40,29 +45,33 @@
         <div class="form-group col-md-4">
             <label for="txtBoxCity">City</label>
             <asp:TextBox ID="txtBoxCity" runat="server" class="form-control" placeholder="Please enter city.."></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="*** Please provide valid city name ...." ControlToValidate="txtBoxCity" ForeColor="#FF3300"></asp:RequiredFieldValidator>
         </div>
 
         <div class="form-group col-md-4">
             <label for="ddlProvince">Province</label>
-            <asp:DropDownList ID="ddlProvince" runat="server" class="form-control">
+&nbsp;<asp:DropDownList ID="ddlProvince" runat="server" class="form-control">
                 <asp:ListItem Enabled="true" Text="Select Province" Value="-1"></asp:ListItem>
                 <asp:ListItem Text="Alberta" Value="1"></asp:ListItem>
                 <asp:ListItem Text="British Columbia" Value="2"></asp:ListItem>
                 <asp:ListItem Text="Toronto" Value="3"></asp:ListItem>
             </asp:DropDownList>
+
+            <asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="*** Please select proper province name ...." ControlToValidate="ddlProvince" ForeColor="#CC3300" Operator="NotEqual" ValueToCompare="-1"></asp:CompareValidator>
         </div>
 
 
         <div class="form-group col-md-4">
             <label for="txtBoxPostalCode">Postal Code</label>
-            <asp:TextBox ID="txtBoxPostalCode" runat="server" class="form-control" placeholder="Please enter postal code.."></asp:TextBox>
+            <asp:TextBox ID="txtBoxPostalCode" runat="server" class="form-control" placeholder="Please enter postal code..."></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ErrorMessage="*** Please provide postal code ...." ControlToValidate="txtBoxPostalCode" ForeColor="#CC3300"></asp:RequiredFieldValidator>
         </div>
     </div>
 
     <div class="row">
         <div class="form-group col-md-4">
             <label>Gender</label>
-            <br/>
+     
             <asp:RadioButton ID="rdBtnGenderMale" runat="server" GroupName="gender"/> Male
             <asp:RadioButton ID="rdBtnGenderFemale" runat="server" GroupName="gender"/> Female
         </div>
@@ -88,11 +97,13 @@
         <div class="form-group col-md-6">
             <label for="txtBoxUsername">Username</label>
             <asp:TextBox ID="txtBoxUsername" runat="server" class="form-control" placeholder="Please enter username.."></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="*** Please provide username .." ControlToValidate="txtBoxUsername" ForeColor="#CC0000"></asp:RequiredFieldValidator>
         </div>
 
         <div class="form-group col-md-6">
             <label for="txtBoxPassword">Password</label>
             <asp:TextBox ID="txtBoxPassword" runat="server" TextMode="Password" class="form-control" placeholder="Please enter password.."></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="*** Please provide password" ControlToValidate="txtBoxPassword" ForeColor="#FF3300"></asp:RequiredFieldValidator>
         </div>
     </div>
 

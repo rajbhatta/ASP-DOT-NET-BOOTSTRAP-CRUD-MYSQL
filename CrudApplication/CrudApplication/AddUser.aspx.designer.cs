@@ -17,34 +17,70 @@ namespace CrudApplication {
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
-        /// To modify, move the field declaration from the designer file to a code-behind file.
+        /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtBoxName;
+        
+        /// <summary>
+        /// RequiredFieldValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
         
         /// <summary>
         /// txtBoxEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
-        /// To modify, move the field declaration from the designer file to a code-behind file.
+        /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtBoxEmail;
+        
+        /// <summary>
+        /// RequiredFieldValidator4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator4;
+        
+        /// <summary>
+        /// RegularExpressionValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator1;
         
         /// <summary>
         /// txtBoxAddress control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
-        /// To modify, move the field declaration from the designer file to a code-behind file.
+        /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtBoxAddress;
+        
+        /// <summary>
+        /// RequiredFieldValidator2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
         
         /// <summary>
         /// txtBoxAddress2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
-        /// To modify, move the field declaration from the designer file to a code-behind file.
+        /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtBoxAddress2;
         
@@ -53,34 +89,61 @@ namespace CrudApplication {
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
-        /// To modify, move the field declaration from the designer file to a code-behind file.
+        /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtBoxCity;
+        
+        /// <summary>
+        /// RequiredFieldValidator3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
         
         /// <summary>
         /// ddlProvince control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
-        /// To modify, move the field declaration from the designer file to a code-behind file.
+        /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlProvince;
+        
+        /// <summary>
+        /// CompareValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator CompareValidator1;
         
         /// <summary>
         /// txtBoxPostalCode control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
-        /// To modify, move the field declaration from the designer file to a code-behind file.
+        /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtBoxPostalCode;
+        
+        /// <summary>
+        /// RequiredFieldValidator7 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator7;
         
         /// <summary>
         /// rdBtnGenderMale control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
-        /// To modify, move the field declaration from the designer file to a code-behind file.
+        /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButton rdBtnGenderMale;
         
@@ -89,7 +152,7 @@ namespace CrudApplication {
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
-        /// To modify, move the field declaration from the designer file to a code-behind file.
+        /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButton rdBtnGenderFemale;
         
@@ -98,7 +161,7 @@ namespace CrudApplication {
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
-        /// To modify, move the field declaration from the designer file to a code-behind file.
+        /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox chkBoxMachineLearning;
         
@@ -107,7 +170,7 @@ namespace CrudApplication {
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
-        /// To modify, move the field declaration from the designer file to a code-behind file.
+        /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox chkBoxPython;
         
@@ -116,7 +179,7 @@ namespace CrudApplication {
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
-        /// To modify, move the field declaration from the designer file to a code-behind file.
+        /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox chkBoxJava;
         
@@ -125,7 +188,7 @@ namespace CrudApplication {
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
-        /// To modify, move the field declaration from the designer file to a code-behind file.
+        /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox chkBoxDatabase;
         
@@ -134,7 +197,7 @@ namespace CrudApplication {
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
-        /// To modify, move the field declaration from the designer file to a code-behind file.
+        /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox chkBoxFrontEnd;
         
@@ -143,7 +206,7 @@ namespace CrudApplication {
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
-        /// To modify, move the field declaration from the designer file to a code-behind file.
+        /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox chkBoxDotNet;
         
@@ -152,7 +215,7 @@ namespace CrudApplication {
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
-        /// To modify, move the field declaration from the designer file to a code-behind file.
+        /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox chkBoxBasicComputer;
         
@@ -161,7 +224,7 @@ namespace CrudApplication {
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
-        /// To modify, move the field declaration from the designer file to a code-behind file.
+        /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Calendar calAvailableDate;
         
@@ -170,25 +233,43 @@ namespace CrudApplication {
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
-        /// To modify, move the field declaration from the designer file to a code-behind file.
+        /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtBoxUsername;
+        
+        /// <summary>
+        /// RequiredFieldValidator5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator5;
         
         /// <summary>
         /// txtBoxPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
-        /// To modify, move the field declaration from the designer file to a code-behind file.
+        /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtBoxPassword;
+        
+        /// <summary>
+        /// RequiredFieldValidator6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator6;
         
         /// <summary>
         /// txtBoxComment control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
-        /// To modify, move the field declaration from the designer file to a code-behind file.
+        /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtBoxComment;
         
@@ -197,20 +278,8 @@ namespace CrudApplication {
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
-        /// To modify, move the field declaration from the designer file to a code-behind file.
+        /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnCreateUser;
-        
-        /// <summary>
-        /// Master property.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated property.
-        /// </remarks>
-        public new CrudApplication.Crud Master {
-            get {
-                return ((CrudApplication.Crud)(base.Master));
-            }
-        }
     }
 }
