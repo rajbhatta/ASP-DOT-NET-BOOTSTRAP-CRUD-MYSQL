@@ -27,4 +27,4 @@
 <img src="Assets/img/After-edit-update.png">
 
 ### 10. After peforming delete operation ###
-<img src="Assets/img/After-delete.png">
+<img src="Assets/img/After-delete.png"> 
