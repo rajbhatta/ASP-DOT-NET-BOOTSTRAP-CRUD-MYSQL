@@ -1,30 +1,177 @@
-## CRUD operations using Bootstrap, MSQL and ASP.NET form ##
-### 1. Create user operation ###
-<img src="Assets/img/create-user.png">
+## CODING STYLE #@
+```java
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
 
-### 2. Create user mandatory field validation ###
-<img src="Assets/img/create-user-validation.png">
+namespace CrudApplication.Exception
+{
+    public class MySqlException : System.Exception
+    {
+        public MySqlException()
+        {
+        }
 
-### 3. Create user email and password validation ###
-<img src="Assets/img/Password-email-validation.png">
+        public MySqlException(string message): base(message)
+        {
 
-### 4. Gridview without data ###
-<img src="Assets/img/Grid-view-without-data.png">
+        }
 
-### 5. Gridview with pagination ###
-<img src="Assets/img/Grid-view-with-pagination.png">
+        public MySqlException(string message, System.Exception inner): base(message, inner)
+        {
 
-### 6. Gridview with search ###
-<img src="Assets/img/Grid-view-search.png">
+        }
+    }
+}
+```
 
-### 7. Edit operation ###
-<img src="Assets/img/Edit-operation.png">
+```java
+namespace CrudApplication.Modals
+{
+    public class User
+    {
+        public string name { get; set; }
 
-### 8. Data on GridView with updated value ###
-<img src="Assets/img/Edit-operation-2.png">
+        public string email { get; set; }
 
-### 9. After performing update ###
-<img src="Assets/img/After-edit-update.png">
+        public string address { get; set; }
 
-### 10. After peforming delete operation ###
-<img src="Assets/img/After-delete.png">
+        public string address2 { get; set; }
+
+        public string city { get; set; }
+
+        public string province { get; set; }
+
+        public string postalCode { get; set; }
+
+        public string gender { get; set; }
+
+        public string programmingSkills { get; set; }
+
+        public string availability { get; set; }
+
+        public string username { get; set; }
+
+        public string password { get; set; }
+
+        public string comment { get; set; }
+
+
+    }
+}
+```
+
+```java
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using CrudApplication.Exception;
+
+namespace CrudApplication.Services.Dao
+{
+    //Performs DAO operations such as save, update and delete for generic type modal. 
+    //MySqDaoService is targeted for MySQL database
+    //OracleDaoService is targeted for Oracle database which is out of scope of this project.
+    //SqlServerDaoService is targeted for the SqlServer database which is out of scope of this project.
+    interface IDaoService<T>
+    {
+        int Save(T t);
+        int update(T t);
+        void Delete(T t);
+    }
+}
+```
+
+```java
+using System;
+using System.Collections.Generic;
+using CrudApplication.Modals;
+using CrudApplication.Services.DatabaseHandler;
+using CrudApplication.Services.DatabaseUtil;
+
+namespace CrudApplication.Services.Dao
+{
+    public class MySqlDaoService: IDaoService<User>
+    {
+        private MySqlDatabaseHanlder _mySqlDatabaseHanlder;
+        private IDataTransferService<User> _dataTransferService;
+
+        public MySqlDaoService(MySqlDatabaseHanlder mySqlDatabaseHandler)
+        {
+            _mySqlDatabaseHanlder = mySqlDatabaseHandler;
+            _dataTransferService = new UserDataMySqlTransferService();
+        }
+        public int Save(User t)
+        {
+            string queryString = _dataTransferService.convertSQLQueryForSave(t);
+            _mySqlDatabaseHanlder.SaveUserToDatabase(queryString);
+            return 1;
+        }
+      
+        public void Delete(User t)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public int update(User t)
+        {
+            throw new NotImplementedException();
+        }
+    }
+}
+```
+
+```java
+using System.Collections.Generic;
+using CrudApplication.Modals;
+
+namespace CrudApplication.Services.Dao
+{
+    public class OracleDaoService: IDaoService<User>
+    {
+        public int Save(User t)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public int update(User t)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void Delete(User t)
+        {
+            throw new System.NotImplementedException();
+        }
+    }
+}
+```
+
+```java
+using System.Collections.Generic;
+using CrudApplication.Modals;
+
+namespace CrudApplication.Services.Dao
+{
+    public class SqlServerDaoService : IDaoService<User>
+    {
+        public int Save(User t)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public int update(User t)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void Delete(User t)
+        {
+            throw new System.NotImplementedException();
+        }
+    }
+}
+```
